@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camp Summit | P2 Summer 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <canvas id="star-canvas"></canvas>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="hero">
+
+    <div class="hero-moon">
+      <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 8C27 8 16 19 16 32C16 45 27 56 40 56C45 56 50 54 54 51C49 52 43 49 39 44C33 37 33 27 39 20C43 16 48 14 53 15C49 11 45 8 40 8Z" fill="#F0E6D3" opacity="0.88"/>
+      </svg>
+    </div>
+
+    <div class="hero-sparkles">
+      <span class="sp sp1">✦</span>
+      <span class="sp sp2">✦</span>
+      <span class="sp sp3">·</span>
+      <span class="sp sp4">✦</span>
+      <span class="sp sp5">·</span>
+      <span class="sp sp6">✦</span>
+      <span class="sp sp7">·</span>
+      <span class="sp sp8">✦</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">ESTD. 1998</div>
+      <h1 class="hero-title">CAMP<br>SUMMIT</h1>
+      <div class="hero-rule">
+        <span class="rule-line"></span>
+        <span class="rule-text">P2 &nbsp;|&nbsp; SUMMER 2026</span>
+        <span class="rule-line"></span>
+      </div>
+      <p class="hero-tagline">— MAKING A POSITIVE IMPACT —</p>
+
+      <div class="hero-nav">
+        <a href="#precamp" class="hn-item">
+          <span class="hn-icon">⛺</span>
+          <span class="hn-label">Pre-Camp</span>
+          <span class="hn-date">June 2</span>
+        </a>
+        <a href="#day1" class="hn-item">
+          <span class="hn-icon">☀️</span>
+          <span class="hn-label">Day 1</span>
+          <span class="hn-date">June 3</span>
+        </a>
+        <a href="#day2" class="hn-item">
+          <span class="hn-icon">🤖</span>
+          <span class="hn-label">Day 2</span>
+          <span class="hn-date">June 4</span>
+        </a>
+        <a href="#venues" class="hn-item">
+          <span class="hn-icon">📍</span>
+          <span class="hn-label">Venues</span>
+          <span class="hn-date">Map</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-forest">
+      <svg class="ht ht-a" viewBox="0 0 50 110" fill="#172E22" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0F1F18"/></svg>
+      <svg class="ht ht-b" viewBox="0 0 50 110" fill="#1F4030" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+      <svg class="ht ht-c" viewBox="0 0 50 110" fill="#162A1E" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0B1A12"/></svg>
+      <svg class="ht ht-d" viewBox="0 0 50 110" fill="#1F4030" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+      <svg class="ht ht-e" viewBox="0 0 50 110" fill="#172E22" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0F1F18"/></svg>
+      <svg class="ht ht-f" viewBox="0 0 50 110" fill="#1F4030" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+      <svg class="ht ht-g" viewBox="0 0 50 110" fill="#162A1E" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0B1A12"/></svg>
+      <svg class="ht ht-h" viewBox="0 0 50 110" fill="#1F4030" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+      <svg class="ht ht-i" viewBox="0 0 50 110" fill="#172E22" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0F1F18"/></svg>
+      <svg class="ht ht-j" viewBox="0 0 50 110" fill="#1F4030" xmlns="http://www.w3.org/2000/svg"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════ STICKY NAV ══════════════════════════════ -->
+  <nav id="sticky-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">⛺ CAMP SUMMIT</a>
+      <div class="nav-links">
+        <a href="#precamp">PRE-CAMP</a>
+        <a href="#day1">JUNE 3</a>
+        <a href="#day2">JUNE 4</a>
+        <a href="#venues">MAP</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════ PRE-CAMP ═══════════════════════════════ -->
+  <section id="precamp" class="section">
+    <div class="container">
+
+      <div class="eyebrow">JUNE 2 · PRE-CAMP</div>
+      <h2 class="section-title">Roll Into Camp Early</h2>
+      <p class="section-sub">Arriving the night before? Come find your people before the main event kicks off.</p>
+
+      <div class="feature-card precamp-card">
+        <div class="fc-time">5:30 – 9:30 PM</div>
+        <div class="fc-body">
+          <div class="fc-heading">
+            <h3>Flora Happy Hour</h3>
+            <span class="pill pill-blue">Open Invite</span>
+          </div>
+          <p>For out-of-towners rolling in early — grab a drink, shake off the travel dust, and settle into camp mode. No agenda, just good people.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Flora+OKC" target="_blank" rel="noopener" class="map-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions to Flora
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="tree-row">
+      <svg class="mt" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#172E22"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0F1F18"/></svg>
+      <svg class="mt tall" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#162A1E"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0B1A12"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ DAY 1 ═════════════════════════════════ -->
+  <section id="day1" class="section alt-section">
+    <div class="container">
+
+      <div class="eyebrow">JUNE 3 · DAY 1</div>
+      <h2 class="section-title">Let the Games Begin</h2>
+      <div class="venue-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Colcord Hotel &bull; Terrace Room
+        <a href="https://www.google.com/maps/search/?api=1&query=Colcord+Hotel+15+N+Robinson+Ave+Oklahoma+City+OK+73102" target="_blank" rel="noopener" class="venue-map-link">Map →</a>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-time">8:30 – 9:30 AM</div>
+          <div class="tl-body">
+            <div class="tl-title">Breakfast</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">8:45 – 9:30 AM</div>
+          <div class="tl-body">
+            <div class="tl-title">Rudy's Crew</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">9:30 AM – 12:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Morning Session</div>
+            <div class="sub-list">
+              <div class="sub-item">
+                <span class="sub-time">9:30 – 10:15</span>
+                <span class="sub-name">Client Panel</span>
+                <span class="sub-who">Trae, Mark &amp; Michelle</span>
+              </div>
+              <div class="sub-item">
+                <span class="sub-time">10:15 – 11:15</span>
+                <span class="sub-name">Company Meeting</span>
+              </div>
+              <div class="sub-item">
+                <span class="sub-time">11:15 – 12:00</span>
+                <span class="sub-name">ESOP and Finance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">12:00 – 1:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Lunch / Hacky</div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-wide">
+          <div class="tl-time">1:00 – 3:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Team Time</div>
+            <div class="rooms-grid">
+              <div class="room-card">
+                <div class="room-name">Terrace Room</div>
+                <div class="room-team">OESC <span class="room-ct">27</span></div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Speakeasy</div>
+                <div class="room-team">QuikTrip <span class="room-ct">12</span></div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Fint PDR</div>
+                <div class="room-team">PNC <span class="room-ct">2</span></div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Sullivan Room</div>
+                <div class="room-team">OWRB <span class="room-ct">5</span></div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Wright Conference</div>
+                <div class="room-team">PLS <span class="room-ct">3</span></div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Suite</div>
+                <div class="room-team">Sales <span class="room-ct">4</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-fire">
+          <div class="tl-time">5:30 – 9:30 PM</div>
+          <div class="tl-body fire-body">
+            <div class="fire-heading">
+              <span class="fire-emoji" aria-hidden="true">🔥</span>
+              <div class="tl-title">Family Fun Night</div>
+            </div>
+            <div class="fire-venue">
+              <strong>Chicken Shack</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=212+E+Hwy+66+Arcadia+OK+73007" target="_blank" rel="noopener" class="map-btn map-btn-fire">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                212 E Hwy 66, Arcadia, OK
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tree-row">
+      <svg class="mt" viewBox="0 0 30 65" fill="#172E22"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0F1F18"/></svg>
+      <svg class="mt tall" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#162A1E"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0B1A12"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt tall" viewBox="0 0 30 65" fill="#172E22"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0F1F18"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ DAY 2 ═════════════════════════════════ -->
+  <section id="day2" class="section">
+    <div class="container">
+
+      <div class="eyebrow">JUNE 4 · DAY 2</div>
+      <h2 class="section-title">Level Up</h2>
+      <div class="venue-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Colcord Hotel &bull; Terrace &amp; Breakouts
+        <a href="https://www.google.com/maps/search/?api=1&query=Colcord+Hotel+15+N+Robinson+Ave+Oklahoma+City+OK+73102" target="_blank" rel="noopener" class="venue-map-link">Map →</a>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-time">8:30 – 9:30 AM</div>
+          <div class="tl-body">
+            <div class="tl-title">Breakfast</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">9:30 – 10:30 AM</div>
+          <div class="tl-body">
+            <div class="tl-title">Keynote — Opening</div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-wide">
+          <div class="tl-time">10:30 – 11:45 AM</div>
+          <div class="tl-body">
+            <div class="tl-title">AI Enablement Workshop Breakouts <span class="session-pill">Session 1</span></div>
+            <div class="workshop-grid">
+              <div class="ws-card">
+                <div class="ws-room">Terrace Room</div>
+                <div class="ws-topic">Production quality code &amp; review</div>
+                <div class="ws-leads">Stuart &amp; Brian</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Sullivan Room</div>
+                <div class="ws-topic">Client context, pain identification, solutioning</div>
+                <div class="ws-leads">Justin &amp; Evan</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Wright Conference</div>
+                <div class="ws-topic">Planning, decomposition, delivery</div>
+                <div class="ws-leads">Kuhlman &amp; Filip</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Speakeasy</div>
+                <div class="ws-topic">Rapid prototyping and validation</div>
+                <div class="ws-leads">JoJo &amp; Chad</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">11:45 – 12:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Team Picture 📸</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">12:00 – 1:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Lunch</div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-wide">
+          <div class="tl-time">1:00 – 2:15 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">AI Enablement Workshop Breakouts <span class="session-pill">Session 2</span></div>
+            <div class="workshop-grid">
+              <div class="ws-card">
+                <div class="ws-room">Terrace Room</div>
+                <div class="ws-topic">Production quality code &amp; review</div>
+                <div class="ws-leads">Stuart &amp; Brian</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Sullivan Room</div>
+                <div class="ws-topic">Client context, pain identification, solutioning</div>
+                <div class="ws-leads">Justin &amp; Evan</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Wright Conference</div>
+                <div class="ws-topic">Planning, decomposition, delivery</div>
+                <div class="ws-leads">Kuhlman &amp; Filip</div>
+              </div>
+              <div class="ws-card">
+                <div class="ws-room">Speakeasy</div>
+                <div class="ws-topic">Rapid prototyping and validation</div>
+                <div class="ws-leads">JoJo &amp; Chad</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">2:15 – 3:00 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Workshop Closing Comments &amp; Questions</div>
+          </div>
+        </div>
+
+        <div class="tl-item tl-last">
+          <div class="tl-time">3:00 – 3:30 PM</div>
+          <div class="tl-body">
+            <div class="tl-title">Closing Comments 🏕️</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tree-row">
+      <svg class="mt tall" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#172E22"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0F1F18"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+      <svg class="mt tall" viewBox="0 0 30 65" fill="#162A1E"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#0B1A12"/></svg>
+      <svg class="mt" viewBox="0 0 30 65" fill="#1F4030"><polygon points="15,3 27,26 21,26 25,43 19,43 23,60 7,60 11,43 5,43 9,26 3,26"/><rect x="12" y="60" width="6" height="5" fill="#162D22"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ VENUES ════════════════════════════════ -->
+  <section id="venues" class="section alt-section">
+    <div class="container">
+
+      <div class="eyebrow">FIND YOUR WAY</div>
+      <h2 class="section-title">The Map</h2>
+      <p class="section-sub">Every stop on the trail — tap any card to open directions.</p>
+
+      <div class="venue-cards">
+
+        <div class="vc">
+          <div class="vc-header">
+            <span class="vc-daytag">June 2 · Pre-Camp</span>
+            <h3 class="vc-name">Flora</h3>
+          </div>
+          <div class="vc-body">
+            <div class="vc-event">Happy Hour &nbsp;·&nbsp; 5:30 – 9:30 PM</div>
+            <div class="vc-badge pill pill-blue" style="width:fit-content">Open Invite</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Flora+OKC" target="_blank" rel="noopener" class="vc-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open in Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="vc vc-main">
+          <div class="vc-header">
+            <span class="vc-daytag">June 3 – 4 · Main Camp HQ</span>
+            <h3 class="vc-name">Colcord Hotel</h3>
+          </div>
+          <div class="vc-body">
+            <div class="vc-addr">15 N Robinson Ave<br>Oklahoma City, OK 73102</div>
+            <div class="vc-rooms">
+              <span class="vc-rooms-label">Rooms:</span>
+              Terrace · Sullivan · Wright Conference · Speakeasy · Fint PDR · Suite
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Colcord+Hotel+15+N+Robinson+Ave+Oklahoma+City+OK+73102" target="_blank" rel="noopener" class="vc-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open in Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="vc">
+          <div class="vc-header">
+            <span class="vc-daytag">June 3 · Evening</span>
+            <h3 class="vc-name">Chicken Shack</h3>
+          </div>
+          <div class="vc-body">
+            <div class="vc-event">Family Fun Night 🔥 &nbsp;·&nbsp; 5:30 – 9:30 PM</div>
+            <div class="vc-addr">212 E Hwy 66<br>Arcadia, OK 73007</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=212+E+Hwy+66+Arcadia+OK+73007" target="_blank" rel="noopener" class="vc-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open in Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer>
+    <div class="footer-forest">
+      <svg class="ff" viewBox="0 0 50 110" fill="#1A3528"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0F1F18"/></svg>
+      <svg class="ff ff-tall" viewBox="0 0 50 110" fill="#1F4030"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#162D22"/></svg>
+      <svg class="ff" viewBox="0 0 50 110" fill="#152B1E"><polygon points="25,4 48,42 36,42 44,68 32,68 40,95 10,95 18,68 6,68 14,42 2,42"/><rect x="21" y="95" width="8" height="12" fill="#0B1A12"/></svg>
+    </div>
+    <div class="footer-body">
+      <div class="footer-logo">CAMP SUMMIT</div>
+      <div class="footer-sub">P2 &nbsp;|&nbsp; SUMMER 2026</div>
+      <p class="footer-wave">See you at camp. 🦶</p>
+      <p class="footer-copy">Phase2 · Making a Positive Impact · ESTD. 1998</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
