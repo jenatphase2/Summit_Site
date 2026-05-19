@@ -159,31 +159,43 @@
         <div class="tl-item tl-wide">
           <div class="tl-time">1:00 – 3:00 PM</div>
           <div class="tl-body">
-            <div class="tl-title">Team Time</div>
+            <div class="tl-title-row">
+              <div class="tl-title">Team Time</div>
+              <button class="map-trigger" id="open-map">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+                Floor Map
+              </button>
+            </div>
             <div class="rooms-grid">
               <div class="room-card">
-                <div class="room-name">Terrace Room</div>
-                <div class="room-team">OESC <span class="room-ct">27</span></div>
+                <div class="room-name">Terrace</div>
+                <div class="room-team">OESC</div>
+                <div class="room-floor floor-2nd">2nd Floor</div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Sullivan</div>
+                <div class="room-team">OWRB</div>
+                <div class="room-floor floor-2nd">2nd Floor</div>
+              </div>
+              <div class="room-card">
+                <div class="room-name">Wright</div>
+                <div class="room-team">PLS</div>
+                <div class="room-floor floor-2nd">2nd Floor</div>
               </div>
               <div class="room-card">
                 <div class="room-name">Speakeasy</div>
-                <div class="room-team">QuikTrip <span class="room-ct">12</span></div>
+                <div class="room-team">QuikTrip</div>
+                <div class="room-floor floor-tbd">Floor TBD</div>
               </div>
               <div class="room-card">
-                <div class="room-name">Fint PDR</div>
-                <div class="room-team">PNC <span class="room-ct">2</span></div>
+                <div class="room-name">Flint (Private Dining)</div>
+                <div class="room-team">PNC</div>
+                <div class="room-floor floor-note">1st Floor · Near hotel entrance</div>
               </div>
               <div class="room-card">
-                <div class="room-name">Sullivan Room</div>
-                <div class="room-team">OWRB <span class="room-ct">5</span></div>
-              </div>
-              <div class="room-card">
-                <div class="room-name">Wright Conference</div>
-                <div class="room-team">PLS <span class="room-ct">3</span></div>
-              </div>
-              <div class="room-card">
-                <div class="room-name">Suite</div>
-                <div class="room-team">Sales <span class="room-ct">4</span></div>
+                <div class="room-name">Presidential Suite</div>
+                <div class="room-team">Sales</div>
+                <div class="room-floor floor-high">12th Floor</div>
               </div>
             </div>
           </div>
@@ -399,6 +411,25 @@
       <p class="footer-copy">Phase2 · Making a Positive Impact · ESTD. 1998</p>
     </div>
   </footer>
+
+  <!-- ══════════════════════════ MAP MODAL ══════════════════════════════ -->
+  <div id="map-modal" class="map-modal" role="dialog" aria-modal="true" aria-label="Colcord Hotel Floor Map">
+    <div class="map-modal-inner">
+      <div class="map-modal-header">
+        <span>Colcord Hotel — 2nd Floor Map</span>
+        <button class="map-modal-close" id="close-map" aria-label="Close">✕</button>
+      </div>
+      <div class="map-modal-body">
+        <img src="colcord-map.jpg" alt="Colcord Hotel 2nd floor map">
+      </div>
+      <div class="map-modal-footer">
+        <span class="mf-item mf-2nd">Sullivan, Terrace &amp; Wright are on the 2nd floor (shown above)</span>
+        <span class="mf-item mf-1st">Flint (PNC) — 1st floor, near the hotel entrance</span>
+        <span class="mf-item mf-high">Presidential Suite (Sales) — 12th floor</span>
+        <span class="mf-item mf-tbd">Speakeasy (QuikTrip) — floor TBD</span>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

@@ -62,6 +62,13 @@ new IntersectionObserver(
   { threshold: 0.35, rootMargin: '-60px 0px -40% 0px' }
 ).observe(document.getElementById('precamp'));
 
+// ─── Floor map modal ─────────────────────────────────────────────────
+const mapModal = document.getElementById('map-modal');
+document.getElementById('open-map').addEventListener('click', () => mapModal.classList.add('open'));
+document.getElementById('close-map').addEventListener('click', () => mapModal.classList.remove('open'));
+mapModal.addEventListener('click', e => { if (e.target === mapModal) mapModal.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') mapModal.classList.remove('open'); });
+
 ['day1', 'day2', 'venues'].forEach(id => {
   const el = document.getElementById(id);
   if (!el) return;

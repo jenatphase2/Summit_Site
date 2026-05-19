@@ -474,6 +474,36 @@ body { padding-top: 46px; }
   font-family: var(--font-head);
 }
 
+/* ─── Team Time header row (title + map trigger) ────────────────────── */
+.tl-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.map-trigger {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--blue);
+  background: none;
+  border: 1px solid rgba(20,163,214,.4);
+  padding: 6px 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background .2s, color .2s;
+}
+.map-trigger:hover {
+  background: rgba(20,163,214,.12);
+  color: var(--blue-light);
+}
+
 /* ══════════════════════════════════════════════════════════════════════
    ROOM CARDS  (Team Time)
    ══════════════════════════════════════════════════════════════════════ */
@@ -515,14 +545,102 @@ body { padding-top: 46px; }
   gap: 8px;
 }
 
-.room-ct {
+/* Floor labels */
+.room-floor {
   font-size: 12px;
-  font-weight: 600;
-  color: var(--blue);
-  background: rgba(77,175,224,.12);
-  border: 1px solid rgba(77,175,224,.3);
-  padding: 1px 7px;
+  margin-top: 5px;
+  font-family: var(--font-body);
 }
+.floor-2nd  { color: var(--blue); }
+.floor-note { color: var(--cream-muted); font-style: italic; font-size: 11px; }
+.floor-high { color: var(--gold); }
+.floor-tbd  { color: var(--cream-muted); opacity: .55; }
+
+/* ══════════════════════════════════════════════════════════════════════
+   MAP MODAL
+   ══════════════════════════════════════════════════════════════════════ */
+.map-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,.82);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.map-modal.open { display: flex; }
+
+.map-modal-inner {
+  background: var(--navy);
+  border: 1px solid rgba(240,230,211,.14);
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.map-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(20,163,214,.1);
+  border-bottom: 1px solid rgba(240,230,211,.1);
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+
+.map-modal-close {
+  background: none;
+  border: none;
+  color: var(--cream-muted);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color .2s;
+}
+.map-modal-close:hover { color: var(--cream); }
+
+.map-modal-body {
+  overflow: auto;
+  flex: 1;
+}
+.map-modal-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-modal-footer {
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  border-top: 1px solid rgba(240,230,211,.08);
+  background: rgba(0,0,0,.25);
+  flex-shrink: 0;
+}
+.mf-item {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.mf-item::before { margin-right: 5px; }
+.mf-2nd  { color: var(--blue); }
+.mf-2nd::before  { content: '🗺'; }
+.mf-1st  { color: var(--cream-muted); }
+.mf-1st::before  { content: '↓'; }
+.mf-high { color: var(--gold); }
+.mf-high::before { content: '↑'; }
+.mf-tbd  { color: var(--cream-muted); opacity: .6; }
+.mf-tbd::before  { content: '?'; }
 
 /* ══════════════════════════════════════════════════════════════════════
    WORKSHOP CARDS  (AI Breakouts)
