@@ -211,7 +211,7 @@ body { padding-top: 58px; }
 
 .eyebrow {
   font-family: var(--font-head);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: .2em;
   color: var(--blue);
