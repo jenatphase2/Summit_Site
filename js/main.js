@@ -45,10 +45,8 @@ resize();
 window.addEventListener('resize', resize);
 drawStars();
 
-// Nav is always visible — no toggle needed
-
 // ─── Active nav link highlight ───────────────────────────────────────
-const navLinks = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('#top-nav a');
 
 new IntersectionObserver(
   entries => {

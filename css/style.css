@@ -164,37 +164,24 @@ a:hover { color: var(--blue-light); }
 
 
 /* ══════════════════════════════════════════════════════════════════════
-   STICKY NAV
+   FIXED NAV — always at top
    ══════════════════════════════════════════════════════════════════════ */
-#sticky-nav {
-  position: sticky;
+#top-nav {
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 14px 24px;
   background: rgba(10, 23, 40, .96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(240,230,211,.08);
 }
 
-.nav-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 28px;
-}
-
-.nav-logo {
-  font-family: var(--font-head);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  color: var(--cream);
-}
-.nav-logo:hover { color: var(--cream); }
-
-.nav-links { display: flex; gap: 32px; }
-.nav-links a {
+#top-nav a {
   font-family: var(--font-head);
   font-size: 12px;
   font-weight: 600;
@@ -202,8 +189,11 @@ a:hover { color: var(--blue-light); }
   color: var(--cream-muted);
   transition: color .2s;
 }
-.nav-links a:hover,
-.nav-links a.active { color: var(--blue); }
+#top-nav a:hover,
+#top-nav a.active { color: var(--blue); }
+
+/* push everything below the fixed nav */
+body { padding-top: 46px; }
 
 /* ══════════════════════════════════════════════════════════════════════
    CONTENT SECTIONS
