@@ -45,14 +45,7 @@ resize();
 window.addEventListener('resize', resize);
 drawStars();
 
-// ─── Sticky nav visibility ───────────────────────────────────────────
-const stickyNav = document.getElementById('sticky-nav');
-const hero      = document.getElementById('hero');
-
-new IntersectionObserver(
-  ([entry]) => stickyNav.classList.toggle('visible', !entry.isIntersecting),
-  { threshold: 0 }
-).observe(hero);
+// Nav is always visible — no toggle needed
 
 // ─── Active nav link highlight ───────────────────────────────────────
 const navLinks = document.querySelectorAll('.nav-links a');

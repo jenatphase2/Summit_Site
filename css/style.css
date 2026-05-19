@@ -62,7 +62,7 @@ a:hover { color: var(--blue-light); }
   overflow: hidden;
   background: radial-gradient(ellipse at 50% 30%, #18304C 0%, var(--navy) 65%);
   z-index: 1;
-  padding-bottom: 120px; /* space for tree row */
+  padding-bottom: 40px;
 }
 
 /* Moon */
@@ -162,30 +162,6 @@ a:hover { color: var(--blue-light); }
 .hn-label { font-size: 13px; }
 .hn-date  { font-size: 11px; font-weight: 400; color: var(--cream-muted); letter-spacing: .05em; }
 
-/* Pine forest silhouette */
-.hero-forest {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0;
-  z-index: 1;
-}
-
-.ht { flex-shrink: 0; }
-.ht-a { width: 60px;  height: 110px; }
-.ht-b { width: 85px;  height: 148px; }
-.ht-c { width: 55px;  height: 100px; opacity: .8; }
-.ht-d { width: 100px; height: 172px; }
-.ht-e { width: 65px;  height: 115px; }
-.ht-f { width: 80px;  height: 140px; }
-.ht-g { width: 58px;  height: 104px; opacity: .75; }
-.ht-h { width: 92px;  height: 158px; }
-.ht-i { width: 62px;  height: 110px; }
-.ht-j { width: 78px;  height: 136px; }
 
 /* ══════════════════════════════════════════════════════════════════════
    STICKY NAV
@@ -197,10 +173,7 @@ a:hover { color: var(--blue-light); }
   background: rgba(10, 23, 40, .96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(240,230,211,.08);
-  transform: translateY(-100%);
-  transition: transform .3s ease;
 }
-#sticky-nav.visible { transform: translateY(0); }
 
 .nav-inner {
   max-width: 1000px;
@@ -295,17 +268,6 @@ a:hover { color: var(--blue-light); }
 }
 .venue-map-link:hover { color: var(--blue-light); }
 
-/* ─── Tree row divider ───────────────────────────────────────────────── */
-.tree-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 2px;
-  margin-top: 64px;
-  opacity: .55;
-}
-.mt       { width: 28px; height: 58px; }
-.mt.tall  { width: 36px; height: 74px; }
 
 /* ══════════════════════════════════════════════════════════════════════
    FEATURED EVENT CARD  (Pre-Camp)
@@ -728,16 +690,6 @@ footer {
   overflow: hidden;
 }
 
-.footer-forest {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: -4px;
-  margin-bottom: 28px;
-  opacity: .45;
-}
-.ff       { width: 55px;  height: 110px; }
-.ff-tall  { width: 72px;  height: 144px; margin: 0 -6px; }
 
 .footer-logo {
   font-family: var(--font-camp);
