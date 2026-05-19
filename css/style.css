@@ -119,8 +119,8 @@ a:hover { color: var(--blue-light); }
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(to right,  var(--navy) 0%, transparent 12%, transparent 88%, var(--navy) 100%),
-    linear-gradient(to bottom, var(--navy) 0%, transparent 12%, transparent 82%, var(--navy) 100%);
+    linear-gradient(to right, var(--navy) 0%, transparent 12%, transparent 88%, var(--navy) 100%),
+    linear-gradient(to top,   var(--navy) 0%, transparent 18%);
 }
 
 /* Hero nav tiles */
