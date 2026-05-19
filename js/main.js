@@ -18,7 +18,7 @@ function buildStars() {
   const heroH = window.innerHeight; // concentrate in hero viewport
 
   // Small background stars — dense
-  const small = Math.round((canvas.width * heroH) / 3800);
+  const small = Math.round((canvas.width * heroH) / 1200);
   for (let i = 0; i < small; i++) {
     stars.push({
       x:     Math.random() * canvas.width,
@@ -32,7 +32,7 @@ function buildStars() {
   }
 
   // Medium stars — scattered
-  const med = Math.round((canvas.width * heroH) / 9000);
+  const med = Math.round((canvas.width * heroH) / 3000);
   for (let i = 0; i < med; i++) {
     stars.push({
       x:     Math.random() * canvas.width,
@@ -45,8 +45,8 @@ function buildStars() {
     });
   }
 
-  // Bright accent stars — a few, obvious twinkle
-  const bright = Math.round(canvas.width / 120);
+  // Bright accent stars — obvious twinkle
+  const bright = Math.round(canvas.width / 50);
   for (let i = 0; i < bright; i++) {
     stars.push({
       x:     Math.random() * canvas.width,

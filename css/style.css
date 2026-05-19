@@ -60,7 +60,7 @@ a:hover { color: var(--blue-light); }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--navy);
+  background: transparent;
   z-index: 1;
   padding-bottom: 0;
 }
