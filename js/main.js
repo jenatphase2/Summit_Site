@@ -13,50 +13,67 @@ function resize() {
   buildStars();
 }
 
+// Draw a ✦ 4-pointed star centred at (x, y) with tip radius r
+function star4Path(x, y, r) {
+  const inner = r * 0.18; // very thin points
+  ctx.beginPath();
+  for (let i = 0; i < 8; i++) {
+    const angle  = (i * Math.PI / 4) - Math.PI / 2; // start at top
+    const radius = i % 2 === 0 ? r : inner;
+    const px = x + Math.cos(angle) * radius;
+    const py = y + Math.sin(angle) * radius;
+    i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+  }
+  ctx.closePath();
+}
+
 function buildStars() {
   stars = [];
-  const heroH = window.innerHeight; // concentrate in hero viewport
+  const heroH = window.innerHeight;
 
-  // Small background stars — dense
+  // Tiny dot stars — dense background
   const small = Math.round((canvas.width * heroH) / 1200);
   for (let i = 0; i < small; i++) {
     stars.push({
+      type:  'dot',
       x:     Math.random() * canvas.width,
       y:     Math.random() * heroH,
       r:     Math.random() * 0.8 + 0.2,
       base:  Math.random() * 0.35 + 0.08,
-      amp:   Math.random() * 0.2 + 0.05,
+      amp:   Math.random() * 0.2  + 0.05,
       speed: Math.random() * 0.012 + 0.003,
       phase: Math.random() * Math.PI * 2,
     });
   }
 
-  // Medium stars — scattered
+  // Medium 4-pointed stars
   const med = Math.round((canvas.width * heroH) / 3000);
   for (let i = 0; i < med; i++) {
     stars.push({
+      type:  'star4',
       x:     Math.random() * canvas.width,
       y:     Math.random() * heroH,
-      r:     Math.random() * 1.2 + 0.6,
-      base:  Math.random() * 0.45 + 0.2,
-      amp:   Math.random() * 0.35 + 0.1,
+      r:     Math.random() * 3 + 2,
+      base:  Math.random() * 0.4 + 0.2,
+      amp:   Math.random() * 0.35 + 0.15,
       speed: Math.random() * 0.018 + 0.006,
       phase: Math.random() * Math.PI * 2,
     });
   }
 
-  // Bright accent stars — obvious twinkle
+  // Large bright 4-pointed stars — obvious twinkle, soft glow
   const bright = Math.round(canvas.width / 50);
   for (let i = 0; i < bright; i++) {
     stars.push({
+      type:  'star4',
       x:     Math.random() * canvas.width,
       y:     Math.random() * heroH * 0.85,
-      r:     Math.random() * 1.4 + 1.0,
-      base:  0.55,
-      amp:   0.45,
-      speed: Math.random() * 0.025 + 0.01,
+      r:     Math.random() * 5 + 4,
+      base:  0.5,
+      amp:   0.5,
+      speed: Math.random() * 0.022 + 0.008,
       phase: Math.random() * Math.PI * 2,
-      bright: true,
+      glow:  true,
     });
   }
 }
@@ -67,19 +84,28 @@ function drawStars() {
   tick++;
   stars.forEach(s => {
     const alpha = Math.min(1, Math.max(0, s.base + Math.sin(tick * s.speed + s.phase) * s.amp));
-    ctx.beginPath();
-    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    if (s.bright) {
-      // soft glow for bright stars
-      const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 3);
-      grd.addColorStop(0, `rgba(255,255,255,${alpha})`);
-      grd.addColorStop(1, `rgba(255,255,255,0)`);
-      ctx.fillStyle = grd;
-      ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
-    } else {
+
+    if (s.type === 'dot') {
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fill();
+    } else {
+      // optional soft glow behind the point
+      if (s.glow) {
+        const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 2.5);
+        grd.addColorStop(0, `rgba(200,225,255,${alpha * 0.4})`);
+        grd.addColorStop(1, `rgba(200,225,255,0)`);
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = grd;
+        ctx.fill();
+      }
+      // 4-pointed star shape
+      star4Path(s.x, s.y, s.r);
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fill();
     }
-    ctx.fill();
   });
   requestAnimationFrame(drawStars);
 }
