@@ -3,7 +3,7 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
-  --navy:        #00233A;
+  --navy:        #0b243f;
   --navy-alt:    #002D4A;
   --navy-mid:    #003352;
   --rust:        #C4552A;
@@ -173,7 +173,7 @@ a:hover { color: var(--blue-light); }
   justify-content: center;
   gap: 48px;
   padding: 18px 24px;
-  background: rgba(0, 35, 58, 1);
+  background: rgba(11, 36, 63, 1);
   border-bottom: 2px solid var(--blue);
 }
 
@@ -787,7 +787,7 @@ body { padding-top: 58px; }
 footer {
   position: relative;
   z-index: 1;
-  background: #001525;
+  background: #060f1a;
   text-align: center;
   padding: 0 24px 48px;
   overflow: hidden;
