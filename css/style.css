@@ -17,9 +17,9 @@
   --gold:        #C9A84C;
   --gold-light:  #E8C870;
 
-  --font-camp: 'Cooper Black', 'Cooper Std', serif;
-  --font-head: 'Cooper Black', 'Cooper Std', serif;
-  --font-body: 'Open Sans', sans-serif;
+  --font-camp: 'Cooper Black', 'Cooper Std', serif; /* H1 & H2 only */
+  --font-head: 'Manrope', sans-serif;
+  --font-body: 'Manrope', sans-serif;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────── */
