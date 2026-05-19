@@ -315,9 +315,9 @@ body { padding-top: 46px; }
   display: inline-block;
 }
 .pill-blue {
-  background: rgba(77,175,224,.12);
-  border: 1px solid rgba(77,175,224,.5);
+  background: rgba(20,163,214,.1);
   color: var(--blue);
+  /* no border — label, not a button */
 }
 .pill-gold {
   background: rgba(201,168,76,.12);
@@ -474,35 +474,23 @@ body { padding-top: 46px; }
   font-family: var(--font-head);
 }
 
-/* ─── Team Time header row (title + map trigger) ────────────────────── */
-.tl-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 
-.map-trigger {
-  font-family: var(--font-head);
+.grid-map-row {
+  margin-bottom: 10px;
+}
+.grid-map-link {
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .06em;
   color: var(--blue);
   background: none;
-  border: 1px solid rgba(20,163,214,.4);
-  padding: 6px 14px;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: background .2s, color .2s;
+  letter-spacing: .02em;
+  transition: color .2s;
 }
-.map-trigger:hover {
-  background: rgba(20,163,214,.12);
-  color: var(--blue-light);
-}
+.grid-map-link:hover { color: var(--blue-light); }
 
 /* ══════════════════════════════════════════════════════════════════════
    ROOM CARDS  (Team Time)
@@ -619,13 +607,13 @@ body { padding-top: 46px; }
   display: block;
 }
 
-.map-modal-footer {
+.map-modal-key {
   padding: 12px 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  border-top: 1px solid rgba(240,230,211,.08);
-  background: rgba(0,0,0,.25);
+  gap: 6px 24px;
+  border-bottom: 1px solid rgba(240,230,211,.08);
+  background: rgba(0,0,0,.2);
   flex-shrink: 0;
 }
 .mf-item {
@@ -681,6 +669,13 @@ body { padding-top: 46px; }
   color: var(--cream);
   line-height: 1.4;
   margin-bottom: 8px;
+}
+
+.ws-floor {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  font-family: var(--font-body);
 }
 
 .ws-leads {

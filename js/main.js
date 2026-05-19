@@ -64,7 +64,9 @@ new IntersectionObserver(
 
 // ─── Floor map modal ─────────────────────────────────────────────────
 const mapModal = document.getElementById('map-modal');
-document.getElementById('open-map').addEventListener('click', () => mapModal.classList.add('open'));
+document.querySelectorAll('.open-map').forEach(btn =>
+  btn.addEventListener('click', () => mapModal.classList.add('open'))
+);
 document.getElementById('close-map').addEventListener('click', () => mapModal.classList.remove('open'));
 mapModal.addEventListener('click', e => { if (e.target === mapModal) mapModal.classList.remove('open'); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') mapModal.classList.remove('open'); });

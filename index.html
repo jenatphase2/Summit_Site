@@ -159,12 +159,9 @@
         <div class="tl-item tl-wide">
           <div class="tl-time">1:00 – 3:00 PM</div>
           <div class="tl-body">
-            <div class="tl-title-row">
-              <div class="tl-title">Team Time</div>
-              <button class="map-trigger" id="open-map">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-                Floor Map
-              </button>
+            <div class="tl-title">Team Time</div>
+            <div class="grid-map-row">
+              <button class="open-map grid-map-link">View 2nd floor map →</button>
             </div>
             <div class="rooms-grid">
               <div class="room-card">
@@ -188,7 +185,7 @@
                 <div class="room-floor floor-tbd">Floor TBD</div>
               </div>
               <div class="room-card">
-                <div class="room-name">Flint (Private Dining)</div>
+                <div class="room-name">Flint (Private Dining Room)</div>
                 <div class="room-team">PNC</div>
                 <div class="room-floor floor-note">1st Floor · Near hotel entrance</div>
               </div>
@@ -254,24 +251,31 @@
           <div class="tl-time">10:30 – 11:45 AM</div>
           <div class="tl-body">
             <div class="tl-title">AI Enablement Workshop Breakouts <span class="session-pill">Session 1</span></div>
+            <div class="grid-map-row">
+              <button class="open-map grid-map-link">View 2nd floor map →</button>
+            </div>
             <div class="workshop-grid">
               <div class="ws-card">
-                <div class="ws-room">Terrace Room</div>
+                <div class="ws-room">Terrace</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Production quality code &amp; review</div>
                 <div class="ws-leads">Stuart &amp; Brian</div>
               </div>
               <div class="ws-card">
-                <div class="ws-room">Sullivan Room</div>
+                <div class="ws-room">Sullivan</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Client context, pain identification, solutioning</div>
                 <div class="ws-leads">Justin &amp; Evan</div>
               </div>
               <div class="ws-card">
-                <div class="ws-room">Wright Conference</div>
+                <div class="ws-room">Wright</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Planning, decomposition, delivery</div>
                 <div class="ws-leads">Kuhlman &amp; Filip</div>
               </div>
               <div class="ws-card">
                 <div class="ws-room">Speakeasy</div>
+                <div class="ws-floor floor-tbd">Floor TBD</div>
                 <div class="ws-topic">Rapid prototyping and validation</div>
                 <div class="ws-leads">JoJo &amp; Chad</div>
               </div>
@@ -297,24 +301,31 @@
           <div class="tl-time">1:00 – 2:15 PM</div>
           <div class="tl-body">
             <div class="tl-title">AI Enablement Workshop Breakouts <span class="session-pill">Session 2</span></div>
+            <div class="grid-map-row">
+              <button class="open-map grid-map-link">View 2nd floor map →</button>
+            </div>
             <div class="workshop-grid">
               <div class="ws-card">
-                <div class="ws-room">Terrace Room</div>
+                <div class="ws-room">Terrace</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Production quality code &amp; review</div>
                 <div class="ws-leads">Stuart &amp; Brian</div>
               </div>
               <div class="ws-card">
-                <div class="ws-room">Sullivan Room</div>
+                <div class="ws-room">Sullivan</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Client context, pain identification, solutioning</div>
                 <div class="ws-leads">Justin &amp; Evan</div>
               </div>
               <div class="ws-card">
-                <div class="ws-room">Wright Conference</div>
+                <div class="ws-room">Wright</div>
+                <div class="ws-floor floor-2nd">2nd Floor</div>
                 <div class="ws-topic">Planning, decomposition, delivery</div>
                 <div class="ws-leads">Kuhlman &amp; Filip</div>
               </div>
               <div class="ws-card">
                 <div class="ws-room">Speakeasy</div>
+                <div class="ws-floor floor-tbd">Floor TBD</div>
                 <div class="ws-topic">Rapid prototyping and validation</div>
                 <div class="ws-leads">JoJo &amp; Chad</div>
               </div>
@@ -419,14 +430,14 @@
         <span>Colcord Hotel — 2nd Floor Map</span>
         <button class="map-modal-close" id="close-map" aria-label="Close">✕</button>
       </div>
+      <div class="map-modal-key">
+        <span class="mf-item mf-2nd">Sullivan, Terrace &amp; Wright — 2nd Floor (shown on map)</span>
+        <span class="mf-item mf-1st">Flint (Private Dining Room) — 1st Floor, near hotel entrance</span>
+        <span class="mf-item mf-high">Presidential Suite — 12th Floor</span>
+        <span class="mf-item mf-tbd">Speakeasy — Floor TBD</span>
+      </div>
       <div class="map-modal-body">
         <img src="colcord-map.jpg" alt="Colcord Hotel 2nd floor map">
-      </div>
-      <div class="map-modal-footer">
-        <span class="mf-item mf-2nd">Sullivan, Terrace &amp; Wright are on the 2nd floor (shown above)</span>
-        <span class="mf-item mf-1st">Flint (PNC) — 1st floor, near the hotel entrance</span>
-        <span class="mf-item mf-high">Presidential Suite (Sales) — 12th floor</span>
-        <span class="mf-item mf-tbd">Speakeasy (QuikTrip) — floor TBD</span>
       </div>
     </div>
   </div>
