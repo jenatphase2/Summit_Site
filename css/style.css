@@ -3,9 +3,9 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
-  --navy:        #0B1829;
-  --navy-alt:    #0E1F35;
-  --navy-mid:    #112440;
+  --navy:        #00233A;
+  --navy-alt:    #002D4A;
+  --navy-mid:    #003352;
   --rust:        #C4552A;
   --rust-light:  #E0714A;
   --blue:        #4DAFE0;
@@ -60,7 +60,7 @@ a:hover { color: var(--blue-light); }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: radial-gradient(ellipse at 50% 30%, #18304C 0%, var(--navy) 65%);
+  background: var(--navy);
   z-index: 1;
   padding-bottom: 40px;
 }
@@ -176,7 +176,7 @@ a:hover { color: var(--blue-light); }
   justify-content: center;
   gap: 40px;
   padding: 14px 24px;
-  background: rgba(10, 23, 40, .96);
+  background: rgba(0, 35, 58, .97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(240,230,211,.08);
 }
@@ -674,7 +674,7 @@ body { padding-top: 46px; }
 footer {
   position: relative;
   z-index: 1;
-  background: #060D18;
+  background: #001525;
   text-align: center;
   padding: 0 24px 48px;
   overflow: hidden;
