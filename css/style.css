@@ -679,6 +679,13 @@ body { padding-top: 58px; }
   font-size: 13px;
   line-height: 1.5;
 }
+.mf-2nd { flex-basis: 100%; }
+.mf-row {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
 .mf-item::before { margin-right: 5px; }
 .mf-2nd  { color: var(--rust-light); }
 .mf-2nd::before  { content: '🗺'; }
