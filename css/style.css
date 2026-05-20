@@ -315,7 +315,6 @@ body { padding-top: 58px; }
   font-size: 15px;
   color: var(--cream-muted);
   margin-bottom: 22px;
-  max-width: 460px;
 }
 
 /* Pills / badges */
@@ -513,11 +512,6 @@ body { padding-top: 58px; }
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(240,230,211,.1);
   padding: 14px 16px;
-  transition: background .2s, border-color .2s;
-}
-.room-card:hover {
-  background: rgba(77,175,224,.07);
-  border-color: rgba(77,175,224,.3);
 }
 
 .room-name {
@@ -546,11 +540,21 @@ body { padding-top: 58px; }
   margin-top: 5px;
   font-family: var(--font-body);
 }
-.floor-2nd  { color: var(--blue); }
+.floor-2nd  { color: var(--rust-light); }
 .floor-3rd  { color: #7EC8A0; }
 .floor-note { color: var(--cream-muted); }
 .floor-high { color: var(--gold); }
 .floor-tbd  { color: var(--cream-muted); opacity: .55; }
+
+/* Room name inherits same color as its floor label */
+.room-location:has(.floor-2nd) .room-name,
+.ws-location:has(.floor-2nd) .ws-room   { color: var(--rust-light); }
+.room-location:has(.floor-3rd) .room-name,
+.ws-location:has(.floor-3rd) .ws-room   { color: #7EC8A0; }
+.room-location:has(.floor-note) .room-name,
+.ws-location:has(.floor-note) .ws-room  { color: var(--cream-muted); }
+.room-location:has(.floor-high) .room-name,
+.ws-location:has(.floor-high) .ws-room  { color: var(--gold); }
 
 /* Room / workshop location row: "TERRACE  |  2nd Floor" */
 .room-location,
@@ -577,7 +581,7 @@ body { padding-top: 58px; }
 /* Pipe added via CSS so it disappears naturally on mobile */
 .room-location .room-floor::before,
 .ws-location .ws-floor::before {
-  content: "  |  ";
+  content: "  |   ";
   color: var(--cream-muted);
   opacity: .5;
 }
@@ -659,7 +663,7 @@ body { padding-top: 58px; }
   line-height: 1.5;
 }
 .mf-item::before { margin-right: 5px; }
-.mf-2nd  { color: var(--blue); }
+.mf-2nd  { color: var(--rust-light); }
 .mf-2nd::before  { content: '🗺'; }
 .mf-1st  { color: var(--cream-muted); }
 .mf-1st::before  { content: '↓'; }
@@ -685,12 +689,6 @@ body { padding-top: 58px; }
   border: 1px solid rgba(240,230,211,.1);
   border-top: 3px solid var(--blue);
   padding: 14px 16px;
-  transition: background .2s, border-color .2s;
-}
-.ws-card:hover {
-  background: rgba(77,175,224,.07);
-  border-color: rgba(77,175,224,.35);
-  border-top-color: var(--blue);
 }
 
 .ws-room {
@@ -741,7 +739,6 @@ body { padding-top: 58px; }
   display: flex;
   flex-direction: column;
 }
-.vc:hover { border-color: rgba(77,175,224,.3); }
 
 .vc-main { border-color: rgba(77,175,224,.25); }
 .vc-main .vc-header { background: rgba(77,175,224,.08); }
@@ -777,8 +774,6 @@ body { padding-top: 58px; }
   gap: 8px;
   flex: 1;
 }
-
-.vc-btn { margin-top: auto; }
 
 .vc-event {
   font-family: var(--font-head);
@@ -817,7 +812,7 @@ body { padding-top: 58px; }
   color: var(--rust-light);
   border: 1px solid rgba(224,113,74,.5);
   padding: 8px 14px;
-  margin-top: 8px;
+  margin-top: auto;
   width: fit-content;
   transition: background .2s, color .2s;
 }
