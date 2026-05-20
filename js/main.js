@@ -61,6 +61,21 @@ function buildStars() {
     });
   }
 
+  // Extra medium stars to fill the center zone where bright stars were removed
+  const fill = Math.round(canvas.width / 30);
+  for (let i = 0; i < fill; i++) {
+    stars.push({
+      type:  'star4',
+      x:     canvas.width * 0.1 + Math.random() * canvas.width * 0.8,
+      y:     Math.random() * heroH * 0.85,
+      r:     Math.random() * 2 + 1.5,
+      base:  Math.random() * 0.35 + 0.15,
+      amp:   Math.random() * 0.3 + 0.1,
+      speed: Math.random() * 0.016 + 0.005,
+      phase: Math.random() * Math.PI * 2,
+    });
+  }
+
   // Large bright 4-pointed stars — kept to edges/top to avoid the centered video
   const bright = Math.round(canvas.width / 50);
   for (let i = 0; i < bright; i++) {
