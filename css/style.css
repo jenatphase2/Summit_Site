@@ -731,6 +731,73 @@ body { padding-top: 58px; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   WIFI SECTION
+   ══════════════════════════════════════════════════════════════════════ */
+.wifi-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(240,230,211,.1);
+  border-left: 4px solid var(--blue);
+  padding: 32px 36px;
+  margin-top: 24px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wifi-field {}
+
+.wifi-label {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+
+.wifi-value {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: .01em;
+}
+
+.wifi-pw-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.wifi-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid rgba(240,230,211,.2);
+  color: var(--cream-muted);
+  cursor: pointer;
+  padding: 6px 12px;
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: border-color .2s, color .2s;
+}
+.wifi-copy:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.wifi-copy.copied {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    VENUE CARDS
    ══════════════════════════════════════════════════════════════════════ */
 .venue-cards {

@@ -169,7 +169,21 @@ document.getElementById('close-map').addEventListener('click', () => mapModal.cl
 mapModal.addEventListener('click', e => { if (e.target === mapModal) mapModal.classList.remove('open'); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') mapModal.classList.remove('open'); });
 
-['day1', 'day2', 'venues'].forEach(id => {
+// ─── WiFi password copy ──────────────────────────────────────────────
+document.querySelectorAll('.wifi-copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.dataset.copy).then(() => {
+      btn.classList.add('copied');
+      btn.querySelector('.copy-label').textContent = 'Copied!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.querySelector('.copy-label').textContent = 'Copy';
+      }, 2200);
+    });
+  });
+});
+
+['day1', 'day2', 'wifi', 'venues'].forEach(id => {
   const el = document.getElementById(id);
   if (!el) return;
   new IntersectionObserver(
