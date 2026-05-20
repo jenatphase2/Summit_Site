@@ -577,12 +577,10 @@ body { padding-top: 58px; }
   margin-bottom: 0;
 }
 
-/* Comma separator — wraps naturally, no responsive hide needed */
-.room-location .room-floor::before,
-.ws-location .ws-floor::before {
-  content: ", ";
-  color: inherit;
-  opacity: 1;
+/* Comma on room name ::after so it's glued with no space before it */
+.room-location .room-name::after,
+.ws-location .ws-room::after {
+  content: ",";
 }
 
 /* ══════════════════════════════════════════════════════════════════════
