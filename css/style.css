@@ -187,8 +187,8 @@ a:hover { color: #F5906A; }
   justify-content: center;
   gap: 48px;
   padding: 18px 24px;
-  background: rgba(11, 36, 63, 1);
-  border-bottom: 2px solid var(--blue);
+  background: #060f1a;
+  border-bottom: none;
 }
 
 #top-nav a {
