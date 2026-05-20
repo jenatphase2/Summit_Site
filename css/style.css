@@ -45,8 +45,8 @@ body {
   overflow-x: hidden;
 }
 
-a { color: var(--blue); text-decoration: none; transition: color .2s; }
-a:hover { color: var(--blue-light); }
+a { color: var(--rust-light); text-decoration: none; transition: color .2s; }
+a:hover { color: #F5906A; }
 
 /* ─── Pine tree colour token (matches illustrated trees in collateral) ─ */
 /* hero forest SVG fills are set inline; section dividers use this via CSS */
@@ -57,6 +57,9 @@ a:hover { color: var(--blue-light); }
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -227,6 +230,8 @@ body { padding-top: 58px; }
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 8px;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 
 .section-title {
@@ -264,9 +269,9 @@ body { padding-top: 58px; }
 .venue-map-link {
   margin-left: 6px;
   font-size: 12px;
-  color: var(--blue);
+  color: var(--rust-light);
 }
-.venue-map-link:hover { color: var(--blue-light); }
+.venue-map-link:hover { color: #F5906A; }
 
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -345,21 +350,13 @@ body { padding-top: 58px; }
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--blue);
-  border: 1px solid rgba(77,175,224,.45);
+  color: var(--rust-light);
+  border: 1px solid rgba(224,113,74,.5);
   padding: 8px 16px;
   transition: background .2s, color .2s;
 }
 .map-btn:hover {
-  background: rgba(77,175,224,.14);
-  color: var(--blue-light);
-}
-.map-btn-fire {
-  color: var(--rust-light);
-  border-color: rgba(196,85,42,.5);
-}
-.map-btn-fire:hover {
-  background: rgba(196,85,42,.12);
+  background: rgba(224,113,74,.12);
   color: #F5906A;
 }
 
@@ -450,6 +447,7 @@ body { padding-top: 58px; }
   color: var(--cream-muted);
 }
 .fire-venue strong { color: var(--cream); font-size: 17px; }
+.fire-addr { font-size: 13px; color: var(--cream-muted); }
 
 /* Sub-sessions (morning block) */
 .sub-list {
@@ -492,7 +490,7 @@ body { padding-top: 58px; }
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--rust-light);
   background: none;
   border: none;
   padding: 0;
@@ -500,7 +498,7 @@ body { padding-top: 58px; }
   letter-spacing: .02em;
   transition: color .2s;
 }
-.grid-map-link:hover { color: var(--blue-light); }
+.grid-map-link:hover { color: #F5906A; }
 
 /* ══════════════════════════════════════════════════════════════════════
    ROOM CARDS  (Team Time)
@@ -782,16 +780,16 @@ body { padding-top: 58px; }
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--blue);
-  border: 1px solid rgba(77,175,224,.4);
+  color: var(--rust-light);
+  border: 1px solid rgba(224,113,74,.5);
   padding: 8px 14px;
   margin-top: 8px;
   width: fit-content;
   transition: background .2s, color .2s;
 }
 .vc-btn:hover {
-  background: rgba(77,175,224,.14);
-  color: var(--blue-light);
+  background: rgba(224,113,74,.12);
+  color: #F5906A;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -870,6 +868,26 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
+
+  /* Agenda sub-items: indent wrap lines under event name, not time */
+  .sub-item {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 2px 12px;
+    align-items: baseline;
+  }
+  .sub-time { grid-column: 1; grid-row: 1 / span 2; align-self: start; padding-top: 2px; }
+  .sub-name { grid-column: 2; grid-row: 1; }
+  .sub-who  { grid-column: 2; grid-row: 2; }
+
+  /* Buttons fill card width on mobile */
+  .map-btn,
+  .vc-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 
   .hero-nav { gap: 8px; }
   .hn-item  { min-width: 80px; padding: 14px 14px 10px; }
