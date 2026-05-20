@@ -729,7 +729,6 @@ body { padding-top: 58px; }
 .ws-card {
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(240,230,211,.1);
-  border-top: 3px solid var(--blue);
   padding: 14px 16px;
 }
 
