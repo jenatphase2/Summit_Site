@@ -234,6 +234,17 @@ body { padding-top: 58px; }
   font-feature-settings: "lnum" 1;
 }
 
+/* Force Manrope for the · separator inside Cooper Black eyebrow
+   (Cooper Black lacks the middle-dot glyph; Safari falls back to a
+   heavy serif and renders it as an oversized blob) */
+.eyebrow .sep {
+  font-family: var(--font-body);
+  font-size: .7em;
+  letter-spacing: 0;
+  vertical-align: middle;
+  opacity: .7;
+}
+
 .section-title {
   font-family: var(--font-head);
   font-size: clamp(15px, 2vw, 18px);
@@ -386,6 +397,7 @@ body { padding-top: 58px; }
   top: 26px;
   width: 10px;
   height: 10px;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   background: var(--navy);
   border: 2px solid var(--blue);
