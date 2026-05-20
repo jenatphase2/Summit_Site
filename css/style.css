@@ -901,7 +901,7 @@ body { padding-top: 58px; }
   font-weight: 600;
   color: var(--rust-light);
   letter-spacing: .04em;
-  text-align: left;
+  text-align: center;
   transition: background .2s, color .2s;
 }
 .vc-map-link:hover {
