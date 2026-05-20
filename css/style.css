@@ -247,7 +247,6 @@ body { padding-top: 58px; }
 .section-sub {
   font-size: 15px;
   color: var(--cream-muted);
-  max-width: 480px;
   margin-bottom: 40px;
 }
 
@@ -549,9 +548,28 @@ body { padding-top: 58px; }
 }
 .floor-2nd  { color: var(--blue); }
 .floor-3rd  { color: #7EC8A0; }
-.floor-note { color: var(--cream-muted); font-style: italic; font-size: 11px; }
+.floor-note { color: var(--cream-muted); }
 .floor-high { color: var(--gold); }
 .floor-tbd  { color: var(--cream-muted); opacity: .55; }
+
+/* Room / workshop location row: "TERRACE  |  2nd Floor" */
+.room-location,
+.ws-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 6px;
+}
+.room-sep {
+  color: var(--cream-muted);
+  opacity: .4;
+  font-size: 11px;
+}
+.room-floor,
+.ws-floor {
+  font-size: 11px;
+  font-family: var(--font-body);
+}
 
 /* ══════════════════════════════════════════════════════════════════════
    MAP MODAL
