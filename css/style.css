@@ -733,17 +733,31 @@ body { padding-top: 58px; }
 /* ══════════════════════════════════════════════════════════════════════
    WIFI SECTION
    ══════════════════════════════════════════════════════════════════════ */
+/* WiFi section — title left, card right */
+.wifi-layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.wifi-header-col {
+  flex: 0 0 auto;
+}
+.wifi-header-col .eyebrow    { margin-bottom: 8px; }
+.wifi-header-col .section-title { margin-bottom: 0; }
+
 .wifi-card {
+  flex: 1;
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(240,230,211,.1);
   border-left: 4px solid var(--blue);
-  margin-top: 24px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
 }
 
 .wifi-col {
+  flex: 1;
   padding: 28px 32px;
   border-right: 1px solid rgba(240,230,211,.08);
   display: flex;
@@ -751,20 +765,6 @@ body { padding-top: 58px; }
   justify-content: center;
 }
 .wifi-col:last-child { border-right: none; }
-
-.wifi-col-brand {
-  flex: 0 0 auto;
-  min-width: 120px;
-  align-items: flex-start;
-}
-.wifi-brand {
-  font-family: var(--font-head);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--blue);
-}
 
 .wifi-label {
   font-family: var(--font-head);
@@ -896,8 +896,9 @@ body { padding-top: 58px; }
 }
 
 .vc-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   font-family: var(--font-head);
   font-size: 13px;
@@ -906,9 +907,9 @@ body { padding-top: 58px; }
   text-transform: uppercase;
   color: var(--rust-light);
   border: 1px solid rgba(224,113,74,.5);
-  padding: 8px 14px;
+  padding: 10px 14px;
   margin-top: auto;
-  width: fit-content;
+  width: 100%;
   transition: background .2s, color .2s;
 }
 .vc-btn:hover {
@@ -1004,9 +1005,8 @@ footer {
   .sub-name { grid-column: 2; grid-row: 1; }
   .sub-who  { grid-column: 2; grid-row: 2; }
 
-  /* Buttons fill card width on mobile */
-  .map-btn,
-  .vc-btn {
+  /* Map button fills card width on mobile (.vc-btn is already 100%) */
+  .map-btn {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1021,12 +1021,14 @@ footer {
   .tl-wide .tl-body { padding: 14px 14px; }
   .fire-body         { padding: 14px 14px; }
 
-  /* WiFi card stacks vertically on mobile */
-  .wifi-card { flex-direction: column; }
-  .wifi-col  { border-right: none; border-bottom: 1px solid rgba(240,230,211,.08); padding: 20px 24px; }
+  /* WiFi layout stacks on mobile */
+  .wifi-layout { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .wifi-card   { flex-direction: column; width: 100%; }
+  .wifi-col    { border-right: none; border-bottom: 1px solid rgba(240,230,211,.08); padding: 20px 24px; }
   .wifi-col:last-child { border-bottom: none; }
-  .wifi-col-brand { flex-direction: row; align-items: center; gap: 12px; }
-  .wifi-col-brand svg { margin-bottom: 0; }
+
+  /* vc-btn already full-width; keep map-btn full on mobile */
+  .map-btn { display: flex; width: 100%; justify-content: center; box-sizing: border-box; }
 }
 
 @media (max-width: 400px) {
