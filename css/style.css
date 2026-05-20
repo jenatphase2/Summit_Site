@@ -899,14 +899,14 @@ body { padding-top: 58px; }
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--rust-light);
   letter-spacing: .04em;
-  text-align: center;
+  text-align: left;
   transition: background .2s, color .2s;
 }
 .vc-map-link:hover {
   background: rgba(20,163,214,.18);
-  color: var(--blue-light);
+  color: #F5906A;
 }
 
 /* Inline event + badge row */
