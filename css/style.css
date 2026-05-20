@@ -189,6 +189,7 @@ a:hover { color: #F5906A; }
   padding: 18px 24px;
   background: #0e1c31;
   border-bottom: none;
+  box-shadow: 0 2px 24px rgba(196,85,42,.25);
 }
 
 #top-nav a {
