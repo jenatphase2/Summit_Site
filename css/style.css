@@ -216,7 +216,7 @@ body { padding-top: 58px; }
   z-index: 1;
   padding: 80px 24px 56px;
   background: var(--navy);
-  scroll-margin-top: 72px;
+  scroll-margin-top: 60px;
 }
 .alt-section { background: var(--navy-alt); }
 
