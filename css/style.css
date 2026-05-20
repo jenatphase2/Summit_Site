@@ -4,7 +4,7 @@
 
 :root {
   --navy:        #0b243f;
-  --navy-alt:    #002D4A;
+  --navy-alt:    #152b49;
   --navy-mid:    #003352;
   --rust:        #C4552A;
   --rust-light:  #E0714A;
@@ -578,12 +578,12 @@ body { padding-top: 58px; }
   margin-bottom: 0;
 }
 
-/* Pipe added via CSS so it disappears naturally on mobile */
+/* Comma separator — wraps naturally, no responsive hide needed */
 .room-location .room-floor::before,
 .ws-location .ws-floor::before {
-  content: "  |   ";
-  color: var(--cream-muted);
-  opacity: .5;
+  content: ", ";
+  color: inherit;
+  opacity: 1;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -897,17 +897,6 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
-
-  /* Room/floor location: drop to 2 lines, hide pipe */
-  .room-location .room-floor,
-  .ws-location .ws-floor {
-    display: block;
-    margin-top: 2px;
-  }
-  .room-location .room-floor::before,
-  .ws-location .ws-floor::before {
-    display: none;
-  }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
