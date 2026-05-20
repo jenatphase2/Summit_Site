@@ -887,23 +887,27 @@ body { padding-top: 58px; }
 .fl-note { color: var(--cream-muted); }
 .fl-high { color: var(--gold); }
 
-/* "View 2nd Floor Map" — pinned to bottom of the orange rooms column */
+/* "View 2nd Floor Map" — badge-style row attached to the last room divider */
 .vc-map-link {
-  background: none;
+  display: block;
+  width: 100%;
+  background: rgba(20,163,214,.1);
   border: none;
-  padding: 0;
-  margin-top: auto;
-  padding-top: 14px;
+  padding: 9px 12px;
+  margin-top: 0;
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
-  color: var(--rust-light);
-  letter-spacing: .02em;
-  transition: color .2s;
-  text-align: left;
+  color: var(--blue);
+  letter-spacing: .04em;
+  text-align: center;
+  transition: background .2s, color .2s;
 }
-.vc-map-link:hover { color: #F5906A; }
+.vc-map-link:hover {
+  background: rgba(20,163,214,.18);
+  color: var(--blue-light);
+}
 
 /* Inline event + badge row */
 .vc-event-row {
@@ -1099,6 +1103,13 @@ footer {
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
   .vc-rooms-grid { grid-template-columns: 1fr; }
+
+  /* Second room column (green/gold/muted rooms) gains top breathing room when stacked */
+  .vc-rooms-col + .vc-rooms-col {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(240,230,211,.08);
+  }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
