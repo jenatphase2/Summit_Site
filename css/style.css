@@ -334,7 +334,6 @@ body { padding-top: 58px; }
 }
 .pill-gold {
   background: rgba(201,168,76,.12);
-  border: 1px solid rgba(201,168,76,.5);
   color: var(--gold);
 }
 
