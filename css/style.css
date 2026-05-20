@@ -252,7 +252,7 @@ body { padding-top: 58px; }
   font-style: italic;
   color: var(--blue);
   letter-spacing: .04em;
-  margin-bottom: 12px;
+  margin-bottom: 17px;
 }
 
 .section-sub {
@@ -912,6 +912,17 @@ body { padding-top: 58px; }
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+/* Small venue cards (Flora / Chicken Shack): white event line, addr pushed down, 10px gap to button */
+.vc:not(.vc-wide) .vc-event {
+  color: var(--cream);
+}
+.vc:not(.vc-wide) .vc-addr {
+  margin-top: auto;
+}
+.vc:not(.vc-wide) .vc-btn {
+  margin-top: 10px;
 }
 
 
