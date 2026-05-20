@@ -261,6 +261,18 @@ body { padding-top: 58px; }
   margin-bottom: 40px;
 }
 
+/* Eyebrow + venue badge on same row */
+.eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 44px;
+}
+.eyebrow-row .eyebrow { margin-bottom: 0; }
+.eyebrow-row .venue-tag { margin-bottom: 0; }
+
 /* Venue tag (small location badge below section title) */
 .venue-tag {
   display: inline-flex;
