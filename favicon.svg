@@ -2,19 +2,12 @@
   <!-- Background -->
   <rect width="32" height="32" rx="5" fill="#0b243f"/>
 
-  <!-- Logs — symmetric V pointing up to flame base -->
-  <line x1="6"  y1="28" x2="16" y2="22" stroke="#9B5C2A" stroke-width="3.5" stroke-linecap="round"/>
-  <line x1="26" y1="28" x2="16" y2="22" stroke="#7A4420" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Outer flame — bold bright red-orange -->
+  <path d="M16 2 C11 9 9 15 12 21 C13.5 24.5 18.5 24.5 20 21 C23 15 21 9 16 2Z" fill="#F04010"/>
 
-  <!-- Outer flame — bold, bright rust -->
-  <path d="M16 3 C12.5 8 10 13 12.5 18.5 C13.5 21.5 18.5 21.5 19.5 18.5 C22 13 19.5 8 16 3Z" fill="#E8551A"/>
+  <!-- Mid flame — vivid orange -->
+  <path d="M16 7 C13.5 12 13 17 15 21 C15.5 22.5 16.5 22.5 17 21 C19 17 18.5 12 16 7Z" fill="#FF7020"/>
 
-  <!-- Mid flame — orange -->
-  <path d="M16 7.5 C14 11.5 13.5 15.5 15 19 C15.6 20.5 16.4 20.5 17 19 C18.5 15.5 18 11.5 16 7.5Z" fill="#F5832A"/>
-
-  <!-- Inner flame — bright highlight -->
-  <path d="M16 11.5 C15 14.5 15.2 17.5 16 19.5 C16.8 17.5 17 14.5 16 11.5Z" fill="#FFB060"/>
-
-  <!-- Ember glow -->
-  <ellipse cx="16" cy="22" rx="4.5" ry="1.6" fill="#D4A030" opacity="0.75"/>
+  <!-- Inner flame — bright amber/yellow -->
+  <path d="M16 12 C15 15.5 15.2 19 16 21.5 C16.8 19 17 15.5 16 12Z" fill="#FFC040"/>
 </svg>
