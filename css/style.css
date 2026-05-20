@@ -187,9 +187,10 @@ a:hover { color: #F5906A; }
   justify-content: center;
   gap: 48px;
   padding: 18px 24px;
-  background: #0e1c31;
-  border-bottom: none;
-  box-shadow: 0 2px 24px rgba(196,85,42,.25);
+  background: rgba(11,28,49,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(240,230,211,.08);
 }
 
 #top-nav a {
