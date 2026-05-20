@@ -5,12 +5,20 @@
 // ─── Star field canvas ───────────────────────────────────────────────
 const canvas = document.getElementById('star-canvas');
 const ctx    = canvas.getContext('2d');
-let stars    = [];
+let stars     = [];
+let lastWidth = 0;
 
 function resize() {
-  canvas.width  = window.innerWidth;
+  const w = window.innerWidth;
+  canvas.width  = w;
   canvas.height = window.innerHeight;
-  buildStars();
+  // Only rebuild stars on a real width change (e.g. orientation flip).
+  // Height-only changes (mobile address bar appearing/disappearing) must not
+  // scatter the stars — that's what causes the "freakout" on mobile scroll.
+  if (w !== lastWidth) {
+    lastWidth = w;
+    buildStars();
+  }
 }
 
 // Draw a ✦ 4-pointed star centred at (x, y) with tip radius r
