@@ -555,20 +555,31 @@ body { padding-top: 58px; }
 /* Room / workshop location row: "TERRACE  |  2nd Floor" */
 .room-location,
 .ws-location {
-  display: flex;
-  align-items: center;
-  gap: 7px;
   margin-top: 6px;
+  line-height: 1.6;
 }
-.room-sep {
-  color: var(--cream-muted);
-  opacity: .4;
-  font-size: 11px;
+
+/* Inline so they sit on the same text baseline */
+.room-location .room-name,
+.ws-location .ws-room {
+  display: inline;
+  margin-bottom: 0;
 }
-.room-floor,
-.ws-floor {
+.room-location .room-floor,
+.ws-location .ws-floor {
+  display: inline;
   font-size: 11px;
   font-family: var(--font-body);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Pipe added via CSS so it disappears naturally on mobile */
+.room-location .room-floor::before,
+.ws-location .ws-floor::before {
+  content: "  |  ";
+  color: var(--cream-muted);
+  opacity: .5;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -891,6 +902,17 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
+
+  /* Room/floor location: drop to 2 lines, hide pipe */
+  .room-location .room-floor,
+  .ws-location .ws-floor {
+    display: block;
+    margin-top: 2px;
+  }
+  .room-location .room-floor::before,
+  .ws-location .ws-floor::before {
+    display: none;
+  }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
