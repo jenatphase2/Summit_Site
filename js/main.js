@@ -61,13 +61,27 @@ function buildStars() {
     });
   }
 
-  // Large bright 4-pointed stars — obvious twinkle, soft glow
+  // Large bright 4-pointed stars — kept to edges/top to avoid the centered video
   const bright = Math.round(canvas.width / 50);
   for (let i = 0; i < bright; i++) {
+    let x, y;
+    const zone = Math.random();
+    if (zone < 0.4) {
+      // top strip — above the video
+      x = Math.random() * canvas.width;
+      y = Math.random() * heroH * 0.18;
+    } else if (zone < 0.7) {
+      // left edge
+      x = Math.random() * canvas.width * 0.1;
+      y = Math.random() * heroH * 0.85;
+    } else {
+      // right edge
+      x = canvas.width * 0.9 + Math.random() * canvas.width * 0.1;
+      y = Math.random() * heroH * 0.85;
+    }
     stars.push({
       type:  'star4',
-      x:     Math.random() * canvas.width,
-      y:     Math.random() * heroH * 0.85,
+      x, y,
       r:     Math.random() * 5 + 4,
       base:  0.5,
       amp:   0.5,
