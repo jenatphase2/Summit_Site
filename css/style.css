@@ -829,10 +829,74 @@ body { padding-top: 58px; }
    ══════════════════════════════════════════════════════════════════════ */
 .venue-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 18px;
   margin-top: 40px;
 }
+
+/* Colcord card spans the full width */
+.vc-wide {
+  grid-column: 1 / -1;
+}
+
+/* Two-column body inside the wide card */
+.vc-body-row {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 40px;
+}
+.vc-body-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.vc-body-col-rooms {
+  flex: 1.4;
+}
+
+/* Room list with floor colours */
+.vc-rooms-list {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.vc-room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(240,230,211,.06);
+  font-family: var(--font-head);
+  font-size: 14px;
+}
+.vc-room-item:last-child { border-bottom: none; }
+
+.vc-room-name { font-weight: 600; }
+.vc-room-floor { font-size: 12px; opacity: .9; }
+
+/* Floor colour classes (match the agenda section) */
+.fl-2nd  { color: var(--rust-light); }
+.fl-3rd  { color: #7EC8A0; }
+.fl-note { color: var(--cream-muted); }
+.fl-high { color: var(--gold); }
+
+/* "View 2nd Floor Map" secondary link inside rooms col */
+.vc-map-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rust-light);
+  letter-spacing: .02em;
+  transition: color .2s;
+  text-align: left;
+}
+.vc-map-link:hover { color: #F5906A; }
 
 .vc {
   background: rgba(255,255,255,.03);
@@ -899,15 +963,13 @@ body { padding-top: 58px; }
   line-height: 1.5;
 }
 
-.vc-rooms {
-  font-size: 14px;
-  color: var(--cream-muted);
-  line-height: 1.5;
-}
 .vc-rooms-label {
+  font-family: var(--font-head);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--cream);
-  margin-right: 4px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--blue);
 }
 
 .vc-btn {
@@ -1008,6 +1070,8 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
+  .vc-body-row   { flex-direction: column !important; gap: 24px; }
+  .vc-map-link   { margin-top: 8px; }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
