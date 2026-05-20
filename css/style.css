@@ -829,6 +829,21 @@ footer {
    RESPONSIVE
    ══════════════════════════════════════════════════════════════════════ */
 @media (max-width: 680px) {
+  #hero {
+    justify-content: flex-start;
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-top: 8px;
+  }
+
+  .hero-img-wrap {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
   .tl-item {
     grid-template-columns: 1fr;
     gap: 4px;
