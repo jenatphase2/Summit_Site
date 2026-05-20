@@ -348,6 +348,9 @@ body { padding-top: 58px; }
   color: var(--cream-muted);
   margin-bottom: 22px;
 }
+.precamp-card .fc-body > p {
+  color: var(--cream);
+}
 
 /* Pills / badges */
 .pill {
