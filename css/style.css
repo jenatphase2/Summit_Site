@@ -839,27 +839,15 @@ body { padding-top: 58px; }
   grid-column: 1 / -1;
 }
 
-/* Two-column body inside the wide card */
-.vc-body-row {
-  flex-direction: row !important;
-  align-items: stretch;   /* equal height so button can push to bottom */
-  gap: 64px;
-}
-.vc-body-col {
-  flex: 0 0 160px;        /* narrow left column */
-  display: flex;
-  flex-direction: column;
-}
-.vc-body-col-rooms {
-  flex: 1;                /* rooms col fills the rest */
-}
 
-/* Rooms 2-column grid: orange (2nd floor) left, rest right */
+/* Rooms row — sits below the address+button row in the Colcord card */
 .vc-rooms-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 28px;
-  margin-top: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(240,230,211,.08);
 }
 .vc-rooms-col {
   display: flex;
@@ -899,19 +887,13 @@ body { padding-top: 58px; }
 .fl-note { color: var(--cream-muted); }
 .fl-high { color: var(--gold); }
 
-/* Rooms header: label left, map link right */
-.vc-rooms-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0;
-}
-
-/* "View 2nd Floor Map" secondary link — sits in rooms header row */
+/* "View 2nd Floor Map" — pinned to bottom of the orange rooms column */
 .vc-map-link {
   background: none;
   border: none;
   padding: 0;
+  margin-top: auto;
+  padding-top: 14px;
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 13px;
@@ -919,7 +901,7 @@ body { padding-top: 58px; }
   color: var(--rust-light);
   letter-spacing: .02em;
   transition: color .2s;
-  text-align: right;
+  text-align: left;
 }
 .vc-map-link:hover { color: #F5906A; }
 
@@ -1105,8 +1087,7 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
-  .vc-body-row   { flex-direction: column !important; gap: 24px; }
-  .vc-map-link   { margin-top: 8px; }
+  .vc-rooms-grid { grid-template-columns: 1fr; }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
