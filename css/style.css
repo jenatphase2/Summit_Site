@@ -842,16 +842,16 @@ body { padding-top: 58px; }
 /* Two-column body inside the wide card */
 .vc-body-row {
   flex-direction: row !important;
-  align-items: flex-start;
-  gap: 40px;
+  align-items: stretch;   /* equal height so button can push to bottom */
+  gap: 64px;
 }
 .vc-body-col {
-  flex: 1;
+  flex: 0 0 160px;        /* narrow left column */
   display: flex;
   flex-direction: column;
 }
 .vc-body-col-rooms {
-  flex: 1.4;
+  flex: 1;                /* rooms col fills the rest */
 }
 
 /* Room list with floor colours */
@@ -882,7 +882,15 @@ body { padding-top: 58px; }
 .fl-note { color: var(--cream-muted); }
 .fl-high { color: var(--gold); }
 
-/* "View 2nd Floor Map" secondary link inside rooms col */
+/* Rooms header: label left, map link right */
+.vc-rooms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+/* "View 2nd Floor Map" secondary link — sits in rooms header row */
 .vc-map-link {
   background: none;
   border: none;
@@ -894,9 +902,23 @@ body { padding-top: 58px; }
   color: var(--rust-light);
   letter-spacing: .02em;
   transition: color .2s;
-  text-align: left;
+  text-align: right;
 }
 .vc-map-link:hover { color: #F5906A; }
+
+/* Inline event + badge row */
+.vc-event-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Extra top spacing before address in venue cards */
+.vc-addr-spaced {
+  margin-top: 12px;
+}
 
 .vc {
   background: rgba(255,255,255,.03);
