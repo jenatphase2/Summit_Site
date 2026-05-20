@@ -146,6 +146,14 @@ drawStars();
 // ─── Active nav link highlight ───────────────────────────────────────
 const navLinks = document.querySelectorAll('#top-nav a');
 
+// Immediately update active state on click so the old link doesn't linger
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
 new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
