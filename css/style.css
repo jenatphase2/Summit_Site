@@ -622,7 +622,7 @@ body { padding-top: 58px; }
   background: var(--navy);
   border: 1px solid rgba(240,230,211,.14);
   width: 100%;
-  max-width: 860px;
+  max-width: 660px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
