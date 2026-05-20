@@ -854,13 +854,16 @@ body { padding-top: 58px; }
   flex: 1;                /* rooms col fills the rest */
 }
 
-/* Room list with floor colours */
-.vc-rooms-list {
+/* Rooms 2-column grid: orange (2nd floor) left, rest right */
+.vc-rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 28px;
   margin-top: 10px;
-  margin-bottom: 14px;
+}
+.vc-rooms-col {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 .vc-room-item {
   display: flex;
@@ -871,10 +874,24 @@ body { padding-top: 58px; }
   font-family: var(--font-head);
   font-size: 14px;
 }
-.vc-room-item:last-child { border-bottom: none; }
+.vc-rooms-col .vc-room-item:last-child { border-bottom: none; }
 
 .vc-room-name { font-weight: 600; }
 .vc-room-floor { font-size: 12px; opacity: .9; }
+
+/* Address + button on one row (Flora & Chicken Shack cards) */
+.vc-addr-btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+.vc-addr-btn-row .vc-btn {
+  width: auto;
+  flex-shrink: 0;
+  margin-top: 0;
+}
 
 /* Floor colour classes (match the agenda section) */
 .fl-2nd  { color: var(--rust-light); }
@@ -915,10 +932,6 @@ body { padding-top: 58px; }
   flex-wrap: wrap;
 }
 
-/* Extra top spacing before address in venue cards */
-.vc-addr-spaced {
-  margin-top: 12px;
-}
 
 .vc {
   background: rgba(255,255,255,.03);
@@ -1121,6 +1134,15 @@ footer {
 
   .tl-wide .tl-body { padding: 14px 14px; }
   .fire-body         { padding: 14px 14px; }
+
+  /* Address+button row: button drops to own full-width row on mobile */
+  .vc-addr-btn-row {
+    flex-wrap: wrap;
+  }
+  .vc-addr-btn-row .vc-btn {
+    width: 100%;
+    margin-top: 0;
+  }
 
   /* WiFi layout stacks on mobile */
   .wifi-layout { flex-direction: column; align-items: flex-start; gap: 24px; }
