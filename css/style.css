@@ -214,6 +214,7 @@ body { padding-top: 58px; }
   z-index: 1;
   padding: 80px 24px 56px;
   background: var(--navy);
+  scroll-margin-top: 72px;
 }
 .alt-section { background: var(--navy-alt); }
 
@@ -1093,7 +1094,7 @@ footer {
 @media (max-width: 680px) {
   #hero {
     justify-content: flex-start;
-    padding-top: 40px;
+    padding-top: 56px;
     min-height: auto;
   }
 
@@ -1103,7 +1104,7 @@ footer {
 
   .hero-img-wrap {
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .tl-item {
@@ -1149,6 +1150,8 @@ footer {
     justify-content: center;
     box-sizing: border-box;
   }
+
+  #top-nav { padding-left: 20px; padding-right: 20px; gap: 20px; }
 
   .hero-nav { gap: 8px; }
   .hn-item  { min-width: 80px; padding: 14px 14px 10px; }
