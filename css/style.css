@@ -22,6 +22,16 @@
   --font-body: 'Manrope', sans-serif;
 }
 
+/* ─── Self-hosted Cooper Black (removed from Google Fonts) ──────────── */
+@font-face {
+  font-family: 'Cooper Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local('Cooper Black'),
+       url('../fonts/CooperBlack.woff') format('woff');
+}
+
 /* ─── Reset ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -831,7 +841,7 @@ footer {
 @media (max-width: 680px) {
   #hero {
     justify-content: flex-start;
-    padding-top: 20px;
+    padding-top: 40px;
     min-height: auto;
   }
 
