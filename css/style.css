@@ -875,14 +875,26 @@ body { padding-top: 58px; }
 }
 
 
-/* Rooms row — single column to fit the narrower left card */
+/* Rooms section wrapper — owns the top border/spacing */
+.vc-rooms-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(240,230,211,.08);
+}
+
+/* ROOMS label + map link on same row */
+.vc-rooms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+/* Rooms grid — single column */
 .vc-rooms-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(240,230,211,.08);
 }
 .vc-rooms-col {
   display: flex;
@@ -920,28 +932,20 @@ body { padding-top: 58px; }
 .fl-note { color: var(--cream-muted); }
 .fl-high { color: var(--gold); }
 
-/* "View 2nd Floor Map" — badge-style row at the top of the room list */
+/* "View 2nd Floor Map" — plain right-aligned link */
 .vc-map-link {
-  display: block;
-  width: 100%;
-  background: rgba(255,255,255,.04);
+  background: none;
   border: none;
-  padding: 9px 12px;
-  margin-top: 0;
-  margin-bottom: 4px;
+  padding: 0;
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
   color: var(--rust-light);
-  letter-spacing: .04em;
-  text-align: center;
-  transition: background .2s, color .2s;
+  letter-spacing: .02em;
+  transition: color .2s;
 }
-.vc-map-link:hover {
-  background: rgba(20,163,214,.18);
-  color: #F5906A;
-}
+.vc-map-link:hover { color: #F5906A; }
 
 /* Inline event + badge row */
 .vc-event-row {
