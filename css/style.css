@@ -264,6 +264,16 @@ body { padding-top: 58px; }
   margin-bottom: 40px;
 }
 
+/* MAPS eyebrow + decorative camp trail SVG */
+.eyebrow-trail-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.eyebrow-trail-row .eyebrow { margin-bottom: 0; }
+.camp-trail { flex-shrink: 0; opacity: .9; }
+
 /* Eyebrow + venue badge on same row */
 .eyebrow-row {
   display: flex;
@@ -1161,6 +1171,7 @@ footer {
   }
 
   #top-nav { padding-left: 20px; padding-right: 20px; gap: 20px; }
+  .camp-trail { display: none; }
 
   /* Tighten scroll offset on mobile so the previous section's color doesn't bleed above */
   .section { scroll-margin-top: 58px; }
