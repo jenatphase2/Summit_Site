@@ -868,9 +868,10 @@ body { padding-top: 58px; }
   margin-top: 40px;
 }
 
-/* Colcord card spans the full width */
+/* Colcord card: left column, spans both rows */
 .vc-wide {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  grid-row: 1 / span 2;
 }
 
 
@@ -1141,6 +1142,7 @@ footer {
   .rooms-grid    { grid-template-columns: 1fr 1fr; }
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
+  .vc-wide       { grid-column: auto; grid-row: auto; }
   .vc-rooms-grid { grid-template-columns: 1fr; }
 
   /* Second room column (green/gold/muted rooms) gains top breathing room when stacked */
