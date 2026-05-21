@@ -875,11 +875,9 @@ body { padding-top: 58px; }
 }
 
 
-/* Rooms section wrapper — owns the top border/spacing */
+/* Rooms section wrapper */
 .vc-rooms-section {
   margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(240,230,211,.08);
 }
 
 /* ROOMS label + map link on same row */
