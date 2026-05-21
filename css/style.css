@@ -965,7 +965,7 @@ body { padding-top: 58px; }
   font-size: 15px;
 }
 .vc-wide .vc-btn {
-  margin-top: 0;
+  margin-top: 10px;
 }
 .vc:not(.vc-wide) .vc-addr {
   margin-top: auto;
