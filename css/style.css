@@ -901,17 +901,16 @@ body { padding-top: 58px; }
 .vc-room-name { font-weight: 600; }
 .vc-room-floor { font-size: 12px; opacity: .9; }
 
-/* Address + button on one row (Flora & Chicken Shack cards) */
+/* Address + button: 2-col grid so button fills its column at card width */
 .vc-addr-btn-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   margin-top: 14px;
 }
 .vc-addr-btn-row .vc-btn {
-  width: auto;
-  flex-shrink: 0;
+  width: 100%;
   margin-top: 0;
 }
 
@@ -1184,13 +1183,9 @@ footer {
   .tl-wide .tl-body { padding: 14px 14px; }
   .fire-body         { padding: 14px 14px; }
 
-  /* Address+button row: button drops to own full-width row on mobile */
+  /* Address+button row: stack to single column on mobile */
   .vc-addr-btn-row {
-    flex-wrap: wrap;
-  }
-  .vc-addr-btn-row .vc-btn {
-    width: 100%;
-    margin-top: 0;
+    grid-template-columns: 1fr;
   }
 
   /* WiFi layout stacks on mobile */
