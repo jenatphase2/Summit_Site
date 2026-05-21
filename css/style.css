@@ -875,11 +875,11 @@ body { padding-top: 58px; }
 }
 
 
-/* Rooms row — sits below the address+button row in the Colcord card */
+/* Rooms row — single column to fit the narrower left card */
 .vc-rooms-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 28px;
+  grid-template-columns: 1fr;
+  gap: 0;
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(240,230,211,.08);
@@ -1143,14 +1143,6 @@ footer {
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
   .vc-wide       { grid-column: auto; grid-row: auto; }
-  .vc-rooms-grid { grid-template-columns: 1fr; }
-
-  /* Second room column (green/gold/muted rooms) gains top breathing room when stacked */
-  .vc-rooms-col + .vc-rooms-col {
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(240,230,211,.08);
-  }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
