@@ -902,12 +902,11 @@ body { padding-top: 58px; }
 .vc-room-name { font-weight: 600; }
 .vc-room-floor { font-size: 12px; opacity: .9; }
 
-/* Address + button: 2-col grid so button fills its column at card width */
+/* Address then button stacked vertically */
 .vc-addr-btn-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 14px;
 }
 .vc-addr-btn-row .vc-btn {
@@ -921,7 +920,7 @@ body { padding-top: 58px; }
 .fl-note { color: var(--cream-muted); }
 .fl-high { color: var(--gold); }
 
-/* "View 2nd Floor Map" — badge-style row attached to the last room divider */
+/* "View 2nd Floor Map" — badge-style row at the top of the room list */
 .vc-map-link {
   display: block;
   width: 100%;
@@ -929,6 +928,7 @@ body { padding-top: 58px; }
   border: none;
   padding: 9px 12px;
   margin-top: 0;
+  margin-bottom: 4px;
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 13px;
@@ -1177,10 +1177,6 @@ footer {
   .tl-wide .tl-body { padding: 14px 14px; }
   .fire-body         { padding: 14px 14px; }
 
-  /* Address+button row: stack to single column on mobile */
-  .vc-addr-btn-row {
-    grid-template-columns: 1fr;
-  }
 
   /* WiFi layout stacks on mobile */
   .wifi-layout { flex-direction: column; align-items: flex-start; gap: 24px; }
