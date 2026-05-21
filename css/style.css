@@ -924,7 +924,7 @@ body { padding-top: 58px; }
 .vc-map-link {
   display: block;
   width: 100%;
-  background: rgba(20,163,214,.1);
+  background: rgba(255,255,255,.04);
   border: none;
   padding: 9px 12px;
   margin-top: 0;
@@ -956,6 +956,14 @@ body { padding-top: 58px; }
 .vc:not(.vc-wide) .vc-event {
   color: var(--cream);
   font-size: 15px;
+}
+/* Wide card (Colcord): white event label, button stays in place before rooms */
+.vc-wide .vc-event {
+  color: var(--cream);
+  font-size: 15px;
+}
+.vc-wide .vc-btn {
+  margin-top: 0;
 }
 .vc:not(.vc-wide) .vc-addr {
   margin-top: auto;
