@@ -963,7 +963,7 @@ body { padding-top: 58px; }
 .vc-wide .vc-event {
   color: var(--cream);
   font-size: 15px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .vc-wide .vc-btn {
   margin-top: 10px;
@@ -1157,6 +1157,8 @@ footer {
   .workshop-grid { grid-template-columns: 1fr; }
   .venue-cards   { grid-template-columns: 1fr; }
   .vc-wide       { grid-column: auto; grid-row: auto; }
+  /* Flora first on mobile since it's the earliest date */
+  .venue-cards > .vc:nth-child(2) { order: -1; }
 
   /* Agenda sub-items: indent wrap lines under event name, not time */
   .sub-item {
